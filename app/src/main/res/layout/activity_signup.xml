@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="10dp"
+    tools:context="com.mlabs.bbm.digiletter.SignUpActivity"
+    android:background="#ffffff"
+    android:id="@+id/txtView_attempt">
+
+    <ImageView
+        android:orientation="horizontal"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:gravity="center_horizontal"
+        android:background="@drawable/logo_txt"
+        android:id="@+id/imageView"
+        android:layout_marginBottom="33dp"
+        android:layout_above="@+id/txt_FName"
+        android:layout_toLeftOf="@+id/showCPW"
+        android:layout_toStartOf="@+id/showCPW" />
+
+    <EditText
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:hint="First Name"
+        android:ems="10"
+        android:id="@+id/txt_FName"
+        android:textColorHint="#979797"
+        android:textColor="#000000"
+        android:layout_above="@+id/txt_LName"
+        android:layout_alignLeft="@+id/txt_LName"
+        android:layout_alignStart="@+id/txt_LName" />
+
+    <EditText
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:hint="LastName"
+        android:ems="10"
+        android:id="@+id/txt_LName"
+        android:textColorHint="#979797"
+        android:textColor="#000000"
+        android:layout_above="@+id/txt_UName"
+        android:layout_alignLeft="@+id/txt_UName"
+        android:layout_alignStart="@+id/txt_UName"
+        android:layout_marginBottom="15dp" />
+
+    <EditText
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:hint="Username"
+        android:ems="10"
+        android:id="@+id/txt_UName"
+        android:textColorHint="#979797"
+        android:textColor="#000000"
+        android:layout_above="@+id/txt_Email"
+        android:layout_alignLeft="@+id/txt_Email"
+        android:layout_alignStart="@+id/txt_Email" />
+
+    <EditText
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:hint="E-mail"
+        android:ems="10"
+        android:id="@+id/txt_Email"
+        android:textColorHint="#979797"
+        android:textColor="#000000"
+        android:layout_above="@+id/txt_Password"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:ems="10"
+        android:id="@+id/txt_Password"
+        android:inputType="textPassword"
+        android:textColorHint="#979797"
+        android:textColor="#000000"
+        android:layout_above="@+id/txt_CPassword"
+        android:layout_alignLeft="@+id/txt_Email"
+        android:layout_alignStart="@+id/txt_Email" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="SHOW"
+        android:textColor="#979797"
+        android:id="@+id/showCPW"
+        android:contextClickable="true"
+        android:layout_alignBaseline="@+id/txt_Password"
+        android:layout_alignBottom="@+id/txt_Password"
+        android:layout_alignRight="@+id/txt_Password"
+        android:layout_alignEnd="@+id/txt_Password" />
+
+    <EditText
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:hint="Confirm Password"
+
+        android:contextClickable="true"
+        android:ems="10"
+        android:id="@+id/txt_CPassword"
+        android:textColorHint="#979797"
+        android:textColor="#000000"
+        android:inputType="textPassword"
+        android:layout_marginBottom="37dp"
+        android:layout_above="@+id/btn_CreateAcct"
+        android:layout_alignLeft="@+id/txt_Password"
+        android:layout_alignStart="@+id/txt_Password" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="SHOW"
+        android:textColor="#979797"
+        android:id="@+id/textView2"
+        android:contextClickable="true"
+        android:layout_alignBaseline="@+id/txt_CPassword"
+        android:layout_alignBottom="@+id/txt_CPassword"
+        android:layout_alignRight="@+id/txt_CPassword"
+        android:layout_alignEnd="@+id/txt_CPassword" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="Create Account"
+        android:textColor="#ffffff"
+        android:contextClickable="true"
+        android:typeface="sans"
+        android:background="#000000"
+        android:id="@+id/btn_CreateAcct"
+        android:layout_marginBottom="24dp"
+        android:layout_above="@+id/link_member"
+        android:layout_alignLeft="@+id/txt_CPassword"
+        android:layout_alignStart="@+id/txt_CPassword"
+        android:layout_alignRight="@+id/txt_CPassword"
+        android:layout_alignEnd="@+id/txt_CPassword" />
+
+    <TextView android:id="@+id/link_member"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Already a member? Login."
+        android:textSize="14sp"
+        android:textColor="#818181"
+        android:contextClickable="true"
+        android:layout_marginBottom="43dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>

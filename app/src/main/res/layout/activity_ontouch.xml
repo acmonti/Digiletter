@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white" >
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="390dp"
+        android:layout_height="300dp"
+        android:background="@drawable/clickme"
+
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/lbl_X1"
+        android:text="X1:"
+        android:textColor="#000000"
+        android:textSize="16dp"
+        android:gravity="left"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/lbl_Y2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp" />
+
+    <TextView
+        android:id="@+id/txt_X1"
+        android:hint="X1 Coordinate"
+        android:textColor="#000000"
+        android:textSize="16dp"
+        android:gravity="left"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/imageView"
+        android:layout_toRightOf="@+id/lbl_X1"
+        android:layout_toEndOf="@+id/lbl_X1" />
+
+    <TextView
+        android:id="@+id/lbl_Y1"
+        android:text="Y1:"
+        android:textColor="#000000"
+        android:textSize="16dp"
+        android:gravity="left"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbl_X1"
+        android:layout_alignLeft="@+id/lbl_X1"
+        android:layout_alignStart="@+id/lbl_X1" />
+
+    <TextView
+        android:id="@+id/txt_Y1"
+        android:hint="Y1 Coordinate"
+        android:textColor="#000000"
+        android:textSize="16dp"
+        android:gravity="left"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/lbl_Y1"
+        android:layout_alignRight="@+id/lbl_FirstCoord"
+        android:layout_alignEnd="@+id/lbl_FirstCoord" />
+
+    <TextView
+        android:id="@+id/lbl_FirstCoord"
+        android:text="FIRST COORDINATES"
+        android:textColor="#000000"
+        android:textSize="12dp"
+        android:gravity="left"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+
+        android:layout_alignTop="@+id/lbl_SecondCoord"
+        android:layout_alignLeft="@+id/lbl_X1"
+        android:layout_alignStart="@+id/lbl_X1" />
+
+    <TextView
+        android:id="@+id/txt_X2"
+        android:hint="X2 Coordinate"
+        android:textColor="#000000"
+        android:textSize="16dp"
+        android:gravity="left"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+
+        android:layout_alignTop="@+id/txt_X1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="25dp"
+        android:layout_marginEnd="25dp" />
+
+    <TextView
+        android:id="@+id/txt_Y2"
+        android:hint="Y2 Coordinate"
+        android:textColor="#000000"
+        android:textSize="16dp"
+        android:gravity="left"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_X2"
+        android:layout_alignLeft="@+id/txt_X2"
+        android:layout_alignStart="@+id/txt_X2" />
+
+    <TextView
+        android:id="@+id/lbl_SecondCoord"
+        android:text="SECOND COORDINATES"
+        android:textColor="#000000"
+        android:textSize="12dp"
+        android:gravity="left"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+
+        android:layout_above="@+id/txt_X2"
+        android:layout_alignRight="@+id/txt_X2"
+        android:layout_alignEnd="@+id/txt_X2" />
+
+    <TextView
+        android:id="@+id/txt_DifferenceX"
+        android:hint="X - Diference"
+        android:textColor="#000000"
+        android:textSize="16dp"
+        android:gravity="left"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/lbl_DifferenceX"
+        android:layout_alignLeft="@+id/lbl_SecondCoord"
+        android:layout_alignStart="@+id/lbl_SecondCoord" />
+
+    <TextView
+        android:id="@+id/lbl_DifferenceX"
+        android:text="X1  -  X2:"
+        android:textColor="#000000"
+        android:textSize="16dp"
+        android:gravity="left"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="29dp"
+        android:layout_marginRight="23dp"
+        android:layout_marginEnd="23dp"
+        android:layout_below="@+id/txt_Y1"
+        android:layout_alignRight="@+id/txt_Y1"
+        android:layout_alignEnd="@+id/txt_Y1" />
+
+    <TextView
+        android:id="@+id/txt_Quadrant"
+        android:hint="Quadrant Name"
+        android:textColor="#000000"
+        android:textSize="16dp"
+        android:gravity="left"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/lbl_Quadrant"
+        android:layout_alignLeft="@+id/txt_DifferenceX"
+        android:layout_alignStart="@+id/txt_DifferenceX" />
+
+    <TextView
+        android:id="@+id/lbl_Quadrant"
+        android:text="Quadrant:"
+        android:textColor="#000000"
+        android:textSize="16dp"
+        android:gravity="left"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:layout_below="@+id/lbl_DifferenceY"
+        android:layout_alignLeft="@+id/lbl_DifferenceY"
+        android:layout_alignStart="@+id/lbl_DifferenceY" />
+
+    <TextView
+        android:id="@+id/txt_MotionX"
+        android:hint="X - Motion Style"
+        android:textColor="#000000"
+        android:textSize="16dp"
+        android:gravity="left"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_Quadrant"
+        android:layout_alignLeft="@+id/txt_Quadrant"
+        android:layout_alignStart="@+id/txt_Quadrant" />
+
+    <TextView
+        android:id="@+id/txt_MotionY"
+        android:hint="Y - Motion Style"
+        android:textColor="#000000"
+        android:textSize="16dp"
+        android:gravity="left"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_MotionX"
+        android:layout_alignLeft="@+id/txt_MotionX"
+        android:layout_alignStart="@+id/txt_MotionX" />
+
+    <TextView
+        android:id="@+id/lbl_Motion"
+        android:text="Motion:"
+        android:textColor="#000000"
+        android:textSize="16dp"
+        android:gravity="left"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txt_MotionX"
+        android:layout_alignBottom="@+id/txt_MotionX"
+        android:layout_alignLeft="@+id/lbl_Quadrant"
+        android:layout_alignStart="@+id/lbl_Quadrant" />
+
+    <TextView
+        android:id="@+id/txt_DifferenceY"
+        android:hint="Y - Diference"
+        android:textColor="#000000"
+        android:textSize="16dp"
+        android:gravity="left"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_DifferenceX"
+        android:layout_alignLeft="@+id/txt_DifferenceX"
+        android:layout_alignStart="@+id/txt_DifferenceX" />
+
+    <TextView
+        android:id="@+id/lbl_DifferenceY"
+        android:text="Y1  -  Y2:"
+        android:textColor="#000000"
+        android:textSize="16dp"
+        android:gravity="left"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lbl_DifferenceX"
+        android:layout_alignLeft="@+id/lbl_DifferenceX"
+        android:layout_alignStart="@+id/lbl_DifferenceX" />
+
+    <TextView
+        android:id="@+id/lbl_X2"
+        android:text="X2:"
+        android:textColor="#000000"
+        android:textSize="16dp"
+        android:gravity="left"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/txt_X2"
+        android:layout_toLeftOf="@+id/txt_X2"
+        android:layout_toStartOf="@+id/txt_X2" />
+
+    <TextView
+        android:id="@+id/lbl_Y2"
+        android:text="Y2:"
+        android:textColor="#000000"
+        android:textSize="16dp"
+        android:gravity="left"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_X2"
+        android:layout_alignLeft="@+id/lbl_X2"
+        android:layout_alignStart="@+id/lbl_X2" />
+</RelativeLayout>
