@@ -27,7 +27,8 @@
         android:layout_alignRight="@+id/btn_LogIn"
         android:layout_alignEnd="@+id/btn_LogIn"
         android:layout_toRightOf="@+id/PassWord"
-        android:layout_toEndOf="@+id/PassWord" />
+        android:layout_toEndOf="@+id/PassWord"
+        android:focusable="true" />
 
     <ImageView
         android:id="@+id/PassWord"

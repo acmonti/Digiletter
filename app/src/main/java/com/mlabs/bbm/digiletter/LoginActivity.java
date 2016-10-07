@@ -53,11 +53,15 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(LoginActivity.this, "Login Successful", Toast.LENGTH_SHORT).show();
                     Intent intentSignUP = new Intent(getApplicationContext(),OnTouchActivity.class);
                     startActivity(intentSignUP);
+                    finish();
                 }
                 else
                 {
                     Toast.makeText(LoginActivity.this, "Invalid email or password", Toast.LENGTH_SHORT).show();
                 }
+
+                email_uname.setText("");
+                password_tu.setText("");
             }
         });
 
@@ -86,7 +90,6 @@ public class LoginActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(LoginActivity.this,SignUpActivity.class );
                 startActivity(intent);
-
             }
         });
     }
