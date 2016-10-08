@@ -134,10 +134,9 @@ public class SignUpActivity extends android.app.Activity {
                 else {
                     LoginDatabaseAdapter.insertEntry(nFname, nLname, nUname, nEmail, nPass);
                     Toast.makeText(getApplicationContext(), "Account successfully created", Toast.LENGTH_SHORT).show();
-                    finish();
                     Intent intent = new Intent(SignUpActivity.this,LoginActivity.class );
                     startActivity(intent);
-
+                    finish();
                 }
             }
         });
