@@ -8,9 +8,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class OnTouchActivity extends AppCompatActivity{
-    float x1, y1 , x2, y2, a, b;
-    String msg_Quad = "", msg_XM="", msg_YM="";
     ImageView imageLogo;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,48 +26,86 @@ public class OnTouchActivity extends AppCompatActivity{
         final TextView tMotionX = (TextView) findViewById(R.id.txt_MotionX);
         final TextView tMotionY = (TextView) findViewById(R.id.txt_MotionY);
 
+        tX1.setKeyListener(null);
+        tX2.setKeyListener(null);
+        tY1.setKeyListener(null);
+        tY2.setKeyListener(null);
+        tDiffX.setKeyListener(null);
+        tDiffY.setKeyListener(null);
+        tQuad.setKeyListener(null);
+        tMotionX.setKeyListener(null);
+        tMotionY.setKeyListener(null);
+
         imageLogo = (ImageView) findViewById(R.id.imageView);
 
         imageLogo.setOnTouchListener(new View.OnTouchListener() {
+            float x1,y1,x2,y2;
+
             @Override
             public boolean onTouch(View view, MotionEvent event) {
+                String actionX = "";
+                String actionY = "";
+                String quadrant = "";
+
                 switch (event.getAction()) {
                     case MotionEvent.ACTION_DOWN:
                         x1 = event.getX();
                         y1 = event.getY();
-                        tX1.setText(x1 + "");
-                        tY1.setText(y1 + "");
+                        return true;
                     case MotionEvent.ACTION_UP:
+                        float X = imageLogo.getRight()/2;
+                        float Y = imageLogo.getBottom()/2;
+
                         x2 = event.getX();
                         y2 = event.getY();
+
+                        actionX = "";
+                        actionY = "";
+                        quadrant = "";
+
+                        if (x1<x2){
+                            actionX = "Swiped Right ";
+                        }
+                        if (x1>x2){
+                            actionX = "Swiped Left ";
+                        }
+                        if (y1<y2){
+                            actionY = "Swiped Down ";
+                        }
+                        if (y1>y2)
+                        {
+                            actionY = "Swiped Up ";
+                        }
+
+                        if(x2>X && y2>Y){
+                            quadrant = "Quadrant 4";
+                        }
+                        if(x2<X && y2>Y){
+                            quadrant = "Quadrant 3";
+                        }
+                        if(x2<X && y2<Y){
+                            quadrant = "Quadrant 2";
+                        }
+                        if(x2>X && y2<Y){
+                            quadrant = "Quadrant 1";
+                        }
+
+                        tX1.setText(x1 + "");
+                        tY1.setText(y1 + "");
                         tX2.setText(x2 + "");
                         tY2.setText(y2 + "");
-
-                        a = x1-x2;
-                        b = y1-y2;
-                        tDiffX.setText(Math.abs(a) + "");
-                        tDiffY.setText(Math.abs(b) + "");
-
-                        if (a<0 & b>0){msg_Quad = "1st Quadrant";}
-                        if (a>0 & b>0){msg_Quad = "2nd Quadrant";}
-                        if (a>0 & b<0){msg_Quad = "3rd Quadrant";}
-                        if (a<0 & b<0){msg_Quad = "4th Quadrant";}
-
-                        if (x1 > x2){msg_XM +="Swiped Left ";}
-                        if (x1 < x2){msg_XM +="Swiped Right ";}
-                        if (y1 > y2){msg_YM +="Swiped Up";}
-                        if (y1 < y2){msg_YM +="Swiped Bottom";}
-
-                        tQuad.setText(msg_Quad);
-                        msg_Quad="";
-                        tMotionX.setText(msg_XM);
-                        msg_XM="";
-                        tMotionY.setText(msg_YM);
-                        msg_YM="";
-                }return true;
+                        tDiffX.setText((Math.abs(x2-x1))+"");
+                        tDiffY.setText((Math.abs(y2-y1))+"");
+                        tMotionX.setText(actionX);
+                        tMotionY.setText(actionY);
+                        tQuad.setText(quadrant);
+                }
+                return  false;
             }
+
         });
     }
+
 }
 
 
