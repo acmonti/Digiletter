@@ -65,6 +65,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        assert show != null;
         show.setOnTouchListener(new OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent event) {
@@ -84,10 +85,10 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        assert SignUp != null;
         SignUp.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-
                 Intent intent = new Intent(LoginActivity.this,SignUpActivity.class );
                 startActivity(intent);
             }
